@@ -1,0 +1,15 @@
+appId: com.exambondhubd.app
+---
+# Requires a seeded test account — set MAESTRO_TEST_EMAIL / MAESTRO_TEST_PASSWORD
+# when running, e.g.:
+#   maestro test .maestro/login.yaml -e MAESTRO_TEST_EMAIL=test@example.com -e MAESTRO_TEST_PASSWORD=secret123
+- launchApp
+- assertVisible: "Sign In"
+- tapOn: "e.g. rahim@gmail.com"
+- inputText: ${MAESTRO_TEST_EMAIL}
+- tapOn: "••••••••"
+- inputText: ${MAESTRO_TEST_PASSWORD}
+- tapOn: "Sign In"
+- assertVisible:
+    text: "University & Admission Exams"
+    timeout: 15000
