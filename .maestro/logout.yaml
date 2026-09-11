@@ -1,0 +1,11 @@
+appId: com.exambondhubd.app
+---
+# Chains onto login.yaml's flow — same seeded account, same env vars:
+#   maestro test .maestro/logout.yaml -e MAESTRO_TEST_EMAIL=test@example.com -e MAESTRO_TEST_PASSWORD=secret123
+- runFlow: login.yaml
+- tapOn: "Settings"
+- tapOn: "Log Out from Account"
+- tapOn: "Sign Out"
+- assertVisible:
+    text: "Sign In"
+    timeout: 10000

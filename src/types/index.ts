@@ -1,0 +1,36 @@
+export enum UserRole {
+  SUPER_ADMIN = 'SUPER_ADMIN',
+  ADMIN = 'ADMIN',
+  QUESTION_EDITOR = 'QUESTION_EDITOR',
+  QUESTION_REVIEWER = 'QUESTION_REVIEWER',
+  SUPPORT = 'SUPPORT',
+  USER = 'USER',
+}
+
+export enum DifficultyLevel {
+  EASY = 'EASY',
+  MEDIUM = 'MEDIUM',
+  HARD = 'HARD',
+  ANY = 'ANY',
+}
+
+export enum QuestionType {
+  SINGLE_MCQ = 'SINGLE_MCQ',
+  MULTIPLE_MCQ = 'MULTIPLE_MCQ',
+  TRUE_FALSE = 'TRUE_FALSE',
+}
+
+export enum QuestionSource {
+  PREVIOUS_YEAR = 'PREVIOUS_YEAR',
+  ADMIN_CREATED = 'ADMIN_CREATED',
+  USER_SUBMITTED = 'USER_SUBMITTED',
+}
+
+export enum AttemptStatus {
+  CREATED = 'CREATED',
+  IN_PROGRESS = 'IN_PROGRESS',
+  SUBMITTED = 'SUBMITTED',
+  AUTO_SUBMITTED = 'AUTO_SUBMITTED',
+  EXPIRED = 'EXPIRED',
+  ABANDONED = 'ABANDONED',
+}
